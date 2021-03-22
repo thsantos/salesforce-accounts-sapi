@@ -1,0 +1,14 @@
+#%RAML 1.0
+title: Salesforce Accounts SAPI
+
+version: v1
+
+types:
+  banner: !include types/recordTypeBanner.raml
+  form: !include types/recordTypeForm.raml
+
+/accounts:
+  patch:
+    body:
+      application/json:
+        type: banner | form

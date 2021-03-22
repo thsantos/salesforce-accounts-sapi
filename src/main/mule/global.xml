@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties" xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd
+http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd">
+	<api-gateway:autodiscovery apiId="${api.autoDiscovery}" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="78b685db-4d38-4412-9f3c-c6f280390d92" flowRef="salesforce-accounts-sapi-main" />
+	<global-property doc:name="Global Property" doc:id="bcee4eab-a99d-4e58-bb1d-ff769dde41b4" name="mule.env" value="dev" />
+	<global-property doc:name="Global Property" doc:id="449c205a-44cf-4e0a-955e-3a0b867208d1" name="mule.key" value="Mulesoft" />
+	<configuration-properties doc:name="Configuration properties" doc:id="0c19cfd3-2a0c-4865-a6dd-b6ffb862ecc9" file="properties/${mule.env}.yaml" />
+</mule>
