@@ -29,8 +29,18 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-				<configuration>
-				</configuration>
+                <configuration>
+                    <cloudHubDeployment>
+                        <uri>https://anypoint.mulesoft.com</uri>
+                        <muleVersion>4.3.0</muleVersion>
+                        <username>tns20210310</username>
+                        <password>Blajpt45</password>
+                        <applicationName>salesforce-accounts-sapi</applicationName>
+                        <environment>Sandbox</environment>
+                        <workerType>MICRO</workerType>
+                        <objectStoreV2>true</objectStoreV2>
+                    </cloudHubDeployment>
+                </configuration>
 			</plugin>
 		</plugins>
 	</build>
@@ -58,6 +68,12 @@
             <groupId>com.mulesoft.modules</groupId>
             <artifactId>mule-secure-configuration-property-module</artifactId>
             <version>1.2.3</version>
+            <classifier>mule-plugin</classifier>
+        </dependency>
+    	<dependency>
+            <groupId>com.mulesoft.connectors</groupId>
+            <artifactId>mule-salesforce-connector</artifactId>
+            <version>10.7.0</version>
             <classifier>mule-plugin</classifier>
         </dependency>
     </dependencies>
