@@ -29,18 +29,18 @@
 				<artifactId>mule-maven-plugin</artifactId>
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
-                <configuration>
-                    <cloudHubDeployment>
-                        <uri>https://anypoint.mulesoft.com</uri>
-                        <muleVersion>4.3.0</muleVersion>
-                        <username>${anypoint.platform.username}</username>
-                        <password>${anypoint.platform.password}</password>
-                        <applicationName>${anypoint.platform.app.name}</applicationName>
-                        <environment>${anypoint.platform.env}</environment>
-                        <workerType>${anypoint.platform.worker.type}</workerType>
-                        <objectStoreV2>${anypoint.platform.objstore.v2}</objectStoreV2>
-                    </cloudHubDeployment>
-                </configuration>
+				<configuration>
+				    <cloudHubDeployment>
+					<uri>https://anypoint.mulesoft.com</uri>
+					<muleVersion>4.3.0</muleVersion>
+					<username>${anypoint.platform.username}</username>
+					<password>${anypoint.platform.password}</password>
+					<applicationName>${anypoint.platform.app.name}</applicationName>
+					<environment>${anypoint.platform.env}</environment>
+					<workerType>${anypoint.platform.worker.type}</workerType>
+					<objectStoreV2>${anypoint.platform.objstore.v2}</objectStoreV2>
+				    </cloudHubDeployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
